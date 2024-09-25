@@ -1,3 +1,4 @@
+'use client'
 import './globals.css';
 import {Header} from '@/ui/Header/Header';
 
