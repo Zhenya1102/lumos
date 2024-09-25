@@ -3,7 +3,7 @@ import image2 from '@/public/aboutSection/02.svg'
 import image3 from '@/public/aboutSection/03.svg'
 import image4 from '@/public/aboutSection/04.svg'
 import {Card} from '@/ui/Componets/Card/Card';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 
 const aboutSectionData = {
     units: [

@@ -1,6 +1,5 @@
 import {LogoIcon} from '@/public/svgComponets/LogoIcon';
 import styled from '@emotion/styled'
-// import styled from 'styled-components';
 
 const textIcon = 'VPN'
 

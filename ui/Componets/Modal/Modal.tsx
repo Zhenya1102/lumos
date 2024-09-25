@@ -1,5 +1,5 @@
 import {Button} from '@/ui/Componets/Button/Button';
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import {SubTitle} from '@/ui/Main/Sections/SelectSection';
 import {Name} from '@/ui/Componets/Block/Block';
 import closeIcon from '@/public/icons/closeIcon.svg'

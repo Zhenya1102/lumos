@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import {Button} from '@/ui/Componets/Button/Button';
 import {useEffect, useState} from 'react';
 import {UserWrapper} from '@/assets/types/ApiTypes';

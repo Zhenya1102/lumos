@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import closeIcon from '@/public/icons/closeIcon.svg'
 import Image from 'next/image';
 import {ReactNode} from 'react';

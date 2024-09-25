@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled'
 import mainImage from '@/public/mainSection/mainImage.svg'
 import Image from 'next/image';
 import {Button} from '@/ui/Componets/Button/Button';
