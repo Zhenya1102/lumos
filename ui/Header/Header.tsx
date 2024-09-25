@@ -1,5 +1,6 @@
 'use client'
-import styled from 'styled-components';
+import styled from '@emotion/styled'
+// import styled from 'styled-components';
 import {Logo} from '@/ui/Header/Logo';
 
 const buttonName = 'Get VPN'

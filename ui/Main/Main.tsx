@@ -1,6 +1,7 @@
 'use client'
 import {MainSection} from '@/ui/Main/Sections/MainSection';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import styled from '@emotion/styled'
 import {AboutSection} from '@/ui/Main/Sections/AboutSection';
 import {SelectSection} from '@/ui/Main/Sections/SelectSection';
 
