@@ -11,7 +11,7 @@ import {SquareIcon} from '@/public/svgComponets/SquareIcon';
 const mainSectionData = {
     title: <>Access<span> everything securely</span> with<br/>VPN</>,
     buttonName: 'Get VPN',
-    note: <>Trusted by<br/><span>50M+ Users</span></>,
+    note: <><span>Trusted by</span><span>50M+ Users</span></>,
     units: [
         {
             icon: <LocationIcon/>,

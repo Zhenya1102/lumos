@@ -10,13 +10,6 @@ export const useOverflowHidden = (open: boolean): void => {
             const header = document.querySelector<HTMLElement>('header')
             if (!body || !header) return;
             body.style.overflow = 'hidden'
-
-            /**
-             * Hides scroll, reserves space for scroll width
-             */
-            body.style.paddingRight = '4px'
-            body.style.background = 'transparent'
-            header.style.paddingRight = '4px'
         }
 
         return () => {
@@ -24,12 +17,6 @@ export const useOverflowHidden = (open: boolean): void => {
             const header = document.querySelector<HTMLElement>('header')
             if (!body || !header) return;
             body.style.overflow = 'initial'
-
-            /**
-             * Scroll appears reserve place is hidden
-             */
-            body.style.paddingRight = '0'
-            header.style.paddingRight = '0'
         }
     }, [open])
 }

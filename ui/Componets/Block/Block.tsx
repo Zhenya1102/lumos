@@ -1,11 +1,11 @@
 import styled from '@emotion/styled'
-import React from 'react';
+import React, {useState} from 'react';
 import {Checkbox} from '@/ui/Componets/Checkbox/Checkbox';
 
 type Props = {
-   units?: Unit[]
-   userName?: string
-   isUserName?: boolean
+    units?: Unit[]
+    userName?: string
+    isUserName?: boolean
     isChecked?: boolean;
     onUserSelect?: (userName: string) => void;
 }
@@ -13,7 +13,7 @@ type Props = {
 export const Block = (props: Props) => {
     const {units, userName, isUserName, onUserSelect, isChecked} = props
 
-    const unit = units?.map(({icon, note, title})=>
+    const unit = units?.map(({icon, note, title}) =>
         <Unit key={title}>
             {icon}
             <Items>
@@ -46,7 +46,7 @@ export const Block = (props: Props) => {
 
 const Wrapper = styled.div<{ isUserName?: boolean }>`
   border-radius: 16px;
-  background: #FFF;  
+  background: #FFF;
   box-shadow: 0 2.087px 11.061px 0 rgba(0, 0, 0, 0.25);
   width: 100%;
   min-height: 80px;

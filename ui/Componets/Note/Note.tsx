@@ -1,7 +1,4 @@
-import styled from 'styled-components';
-import left from '@/public/icons/left.svg'
-import right from '@/public/icons/right.svg'
-import {StaticImageData} from 'next/image';
+import styled from '@emotion/styled'
 
 type Props = {
     note: JSX.Element
@@ -11,11 +8,11 @@ export const Note = (props: Props) => {
     const {note} = props
 
     return (
-        <Label left={left} right={right}>{note}</Label>
+        <Label>{note}</Label>
     )
 }
 
-const Label = styled.div<{left: StaticImageData, right: StaticImageData}>`
+const Label = styled.div`
   color: #3177F2;
   text-align: center;
   font-size: 14px;
@@ -23,8 +20,13 @@ const Label = styled.div<{left: StaticImageData, right: StaticImageData}>`
   position: relative;
   min-width: 136px;
   min-height: 42px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  align-items: center;
+  justify-content: center;
   
-  & span {
+  & > span:last-child {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
   }
