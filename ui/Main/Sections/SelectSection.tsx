@@ -21,6 +21,7 @@ export const SelectSection = () => {
     const [selectedUser, setSelectedUser] = useState<string | null>(null)
     const [isOpen, setIsOpen] = useState(false)
     const [email, setEmail] = useState<string>('')
+    const [emailError, setEmailError] = useState<string>('');
 
     const handleUserSelect = (userName: string) => {
         setSelectedUser(userName)
@@ -62,14 +63,17 @@ export const SelectSection = () => {
     const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setEmail(value);
+        setEmailError('');
     }
 
     const handleSubmit = () => {
         if (validateEmail(email)) {
             console.log('Valid email:', email);
+            setEmailError('');
             closeModal();
         } else {
             console.log('Please enter a valid email address.');
+            setEmailError('Please enter a valid email address.');
         }
     }
 
@@ -95,12 +99,19 @@ export const SelectSection = () => {
                 <ModalTitle>{modalTitle}</ModalTitle>
                 <UserName>{selectedUser}</UserName>
                 <Input type="email" placeholder={'Enter your email'} onChange={handleEmailChange}/>
+                {emailError && <ErrorMessage>{emailError}</ErrorMessage>}
                 <Text>{modalText}</Text>
                 <Button onClick={handleSubmit} buttonName={buttonModalName}/>
             </ModalWindow>
         </Wrapper>
     )
 }
+
+const ErrorMessage = styled.span`
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #FF5D17;
+`
 
 const Wrapper = styled.section`
   margin-bottom: 93px;
